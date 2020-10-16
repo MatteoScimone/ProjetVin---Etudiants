@@ -95,17 +95,17 @@ namespace ProjetWPF
             gst.AjouterCave("Cave SIO1",sio1);
             gst.AjouterCave("Cave SIO",sio);
 
+            lvCaves.ItemsSource = gst.LesCaves.Keys;
+
         }
 
         private void lvCaves_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             // A vous de jouer
-            
 
-            lvCaves.ItemsSource = gst.LesCaves.Keys;
-            
-            
-            
+
+            lvCaves.ItemsSource = (lvCaves.SelectedItem as string);
+
         }
 
         private void lvBouteilles_SelectionChanged(object sender, SelectionChangedEventArgs e)
